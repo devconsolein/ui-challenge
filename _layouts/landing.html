@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+    {%- include header.html -%}
+
+    <section id="hero" class="hero hero-home">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-lg-7 text order-2 order-lg-1">
+                    <h1>#DevconsoleUIChallenge</h1>
+                    <p class="hero-text"><b>Devconsole</b> an organization commited towards contributing to OpenSource.
+                        With this <code style="color:#353b48;">#DevconsoleUIChallenge</code> we aim to help people
+                        build great
+                        UI using the frontend technologies of their choice.</p>
+                    <div class="CTA">
+                        <a href="#features" class="btn btn-primary btn-shadow btn-gradient link-scroll">Discover More</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2" style="margin-top:-10%">
+                    <img src="assets/img/ui-challenge.png" alt="..." class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="image col-lg-6 order-2 order-lg-1">
+                    <img src="assets/img/contribute-1.svg" alt="..." class="img-fluid">
+                </div>
+
+                <div class="text col-lg-6 order-1 order-lg-2">
+                    <div class="icon">
+                        <img src="assets/img/hourglass.svg" alt="..." class="img-fluid">
+                    </div>
+                    <h4>Want to contribute ?</h4>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. </p><a href="#" class="btn btn-primary btn-shadow btn-gradient">Fork Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="image col-lg-3 order-2 order-lg-1" style="margin-top:-13%;">
+                    <div class="card" >
+                        <div class="card-header">
+                            <span class="font-weight-bold">Top Contributors</span>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            {% for user in site.data.contributors.users %}
+                            <li class="list-group-item">
+                                <img style="position: relative;
+                                    max-width: 45px;
+                                    float: left;
+                                    margin-right: 15px;"
+                                    class="rounded-circle" src="{{ user.image }}" alt="">
+                                <a class="text-dark" href="http://github.com/amitsin6h" style="display: block;
+                                    padding-top: 3px;
+                                    margin-left: 60px;">{{
+                                    user.name }}</a>
+                                <badge class="badge badge-light" style="font-size:0.7rem">{{ user.title }}</badge>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text col-lg-9 order-1 order-lg-2">
+                    <h1>React JS UI Challenge</h1>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://raw.githubusercontent.com/devconsolein/react-js-ui-challenge/master/app-landing-page/screenshot/task4.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <div class="row">
+            <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1>Want to contribute ?</h1>
+                </div>
+    </div> -->
+
+
+
+    <!-- <div class="py-5">
+      <div class="container page-content">
+          {{ content }}
+      </div>
+    </div> -->
+
+    <!-- {%- include footer.html -%} -->
+
+</body>
+
+</html>
