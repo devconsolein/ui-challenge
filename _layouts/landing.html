@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="image col-lg-3 order-2 order-lg-1" style="margin-top:-13%;">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-header">
                             <span class="font-weight-bold">Top Contributors</span>
                         </div>
@@ -76,14 +76,30 @@
                 </div>
 
                 <div class="text col-lg-9 order-1 order-lg-2">
-                    <h1>React JS UI Challenge</h1>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="https://raw.githubusercontent.com/devconsolein/react-js-ui-challenge/master/app-landing-page/screenshot/task4.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h1>React JS UI Challenge </h1>
+                        </div>
+                        <div class="col-lg-4">
+                            <a href="https://github.com/devconsolein/react-js-ui-challenge" class="btn btn-outline-primary">Fork Now</a>
                         </div>
                     </div>
+
+                    <div class="row">
+                        {% for reactjs_ui in site.data.reactjs.ui_challenge %}
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top" src="{{reactjs_ui.preview}}" alt="Card image cap">
+                                <div class="card-body">
+                                    <p style="margin-top:-10px; margin-bottom: -1px;" class="font-weight-bold text-dark"><b>Author:
+                                        </b>{{reactjs_ui.author}}</p>
+                                    <small><b>Inspiration: </b>{{reactjs_ui.source}}</small>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
                 </div>
             </div>
         </div>
